@@ -1,6 +1,6 @@
 # Sample plugin
 fr:
-  label_plugin_example: Exemple de module d'extension
-  label_meeting_plural: Réunions
-  text_say_hello: Le module d'extension dit « Bonjour »
-  text_say_goodbye: Le module d'extension dit « Au revoir »
+  label_plugin_example: 'Fr: Sample plugin'
+  label_meeting_plural: 'Fr: Meetings'
+  text_say_hello: 'Fr: Plugin say ''Hello'''
+  text_say_goodbye: 'Fr: Plugin say ''Good bye'''
