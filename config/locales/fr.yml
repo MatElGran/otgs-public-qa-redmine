@@ -2,5 +2,5 @@
 fr:
   label_plugin_example: Extension exemple
   label_meeting_plural: Réunions
-  text_say_hello: L'extension dit « Bonjour »
+  text_say_hello: Le plugin dit « Bonjour le monde »
   text_say_goodbye: L'extension dit « Au revoir » Et nous n'en connaissons pas la raison
