@@ -1,0 +1,6 @@
+# Sample plugin
+es:
+  label_plugin_example: Complemento de muestra
+  label_meeting_plural: Reuniones
+  text_say_hello: El complemento dice “Hola”
+  text_say_goodbye: El complemento dice “Adiós” Y desconocemos el motivo
