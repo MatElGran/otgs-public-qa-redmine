@@ -1,6 +1,1457 @@
-# Sample plugin
 fr:
-  label_plugin_example: Plugin d'exemple
-  label_meeting_plural: Réunions
-  text_say_hello: Le plugin dit « Bonjour »
-  text_say_goodbye: Le plugin dit « Au revoir » Et nous n'en connaissons pas la raison
+  direction: ltr
+  date:
+    formats:
+      default: "%m/%d/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+    day_names:
+    - Dimanche
+    - Lundi
+    - Mardi
+    - Mercredi
+    - Jeudi
+    - Vendredi
+    - Samedi
+    abbr_day_names:
+    - Dim
+    - Lun
+    - Mar
+    - Mer
+    - Jeu
+    - Ven
+    - Sam
+    month_names:
+    -
+    - Janvier
+    - Février
+    - Mars
+    - Avril
+    - Mai
+    - Juin
+    - Juillet
+    - Août
+    - Septembre
+    - Octobre
+    - Novembre
+    - Décembre
+    abbr_month_names:
+    -
+    - Janv
+    - Févr
+    - Mars
+    - Avr
+    - Mai
+    - Juin
+    - Juil
+    - Août
+    - Sept
+    - Oct
+    - Nov
+    - Déc
+    order:
+    - année
+    - mois
+    - jour
+  time:
+    formats:
+      default: "%m/%d/%Y %I:%M %p"
+      time: "%I:%M %p"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: am
+    pm: pm
+  datetime:
+    distance_in_words:
+      half_a_minute: une demi-minute
+      less_than_x_seconds:
+        one: moins d’une seconde
+        many: moins de %{count} secondes
+        other: moins de %{count} secondes
+      x_seconds:
+        one: 1 seconde
+        many: "%{count} secondes"
+        other: "%{count} secondes"
+      less_than_x_minutes:
+        one: moins d’une minute
+        many: moins de %{count} minutes
+        other: moins de %{count} minutes
+      x_minutes:
+        one: 1 minute
+        many: "%{count} minutes"
+        other: "%{count} minutes"
+      about_x_hours:
+        one: environ 1 heure
+        many: environ %{count} heures
+        other: environ %{count} heures
+      x_hours:
+        one: 1 heure
+        many: "%{count} heures"
+        other: "%{count} heures"
+      x_days:
+        one: 1 jour
+        many: "%{count} jours"
+        other: "%{count} jours"
+      about_x_months:
+        one: environ 1 mois
+        many: environ %{count} mois
+        other: environ %{count} mois
+      x_months:
+        one: 1 mois
+        many: "%{count} mois"
+        other: "%{count} mois"
+      about_x_years:
+        one: environ 1 an
+        many: environ %{count} ans
+        other: environ %{count} ans
+      over_x_years:
+        one: plus d’un an
+        many: plus de %{count} ans
+        other: plus de %{count} ans
+      almost_x_years:
+        one: presque 1 an
+        many: presque %{count} ans
+        other: presque %{count} ans
+  number:
+    format:
+      separator: "."
+      delimiter: ","
+      precision: '3'
+    human:
+      format:
+        delimiter: ''
+        precision: '3'
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Octet
+            many: Octets
+            other: Octets
+          kb: Ko
+          mb: Mo
+          gb: Go
+          tb: To
+  support:
+    array:
+      sentence_connector: et
+      skip_last_comma: f
+  activerecord:
+    errors:
+      template:
+        header:
+          one: 1 erreur a empêché l’enregistrement de ce %{model}
+          many: "%{count} erreurs ont empêché l’enregistrement de ce %{model}"
+          other: "%{count} erreurs ont empêché l’enregistrement de ce %{model}"
+      messages:
+        inclusion: n’est pas inclus dans la liste
+        exclusion: est réservé
+        invalid: est invalide
+        confirmation: ne correspond pas à la confirmation
+        accepted: doit être accepté
+        empty: ne peut pas être vide
+        blank: ne peut pas être vide
+        too_long: est trop long (maximum %{count} caractères)
+        too_short: est trop court (minimum %{count} caractères)
+        wrong_length: n’a pas la bonne longueur (doit être de %{count} caractères)
+        taken: a déjà été pris
+        not_a_number: n’est pas un nombre
+        not_a_date: n’est pas une date valide
+        greater_than: doit être supérieur à %{count}
+        greater_than_or_equal_to: doit être supérieur ou égal à %{count}
+        equal_to: doit être égal à %{count}
+        less_than: doit être inférieur à %{count}
+        less_than_or_equal_to: doit être inférieur ou égal à %{count}
+        odd: doit être impair
+        even: doit être pair
+        greater_than_start_date: doit être postérieur à la date de début
+        not_same_project: n’appartient pas au même projet
+        circular_dependency: Cette relation créerait une dépendance circulaire
+        cant_link_an_issue_with_a_descendant: Un ticket ne peut pas être lié à l’une de ses sous-tâches
+        earlier_than_minimum_start_date: ne peut pas être antérieur au %{date} à cause des tickets précédents
+        not_a_regexp: n’est pas une expression régulière valide
+        open_issue_with_closed_parent: Un ticket ouvert ne peut pas être rattaché à une tâche parente fermée
+        must_contain_uppercase: doit contenir des lettres majuscules (A-Z)
+        must_contain_lowercase: doit contenir des lettres minuscules (a-z)
+        must_contain_digits: doit contenir des chiffres (0-9)
+        must_contain_special_chars: doit contenir des caractères spéciaux (!, $, %, ...)
+        domain_not_allowed: contient un domaine non autorisé (%{domain})
+        too_simple: est trop simple
+  actionview_instancetag_blank_option: Veuillez sélectionner
+  general_text_No: Non
+  general_text_Yes: Oui
+  general_text_no: non
+  general_text_yes: oui
+  general_lang_name: Anglais
+  general_csv_separator: ","
+  general_csv_decimal_separator: "."
+  general_csv_encoding: ISO-8859-1
+  general_pdf_fontname: freesans
+  general_pdf_monospaced_fontname: freemono
+  general_first_day_of_week: '7'
+  notice_account_updated: Compte mis à jour avec succès.
+  notice_account_invalid_credentials: Utilisateur ou mot de passe invalide
+  notice_account_password_updated: Mot de passe mis à jour avec succès.
+  notice_account_wrong_password: Mauvais mot de passe
+  notice_account_register_done: Compte créé avec succès. Un e-mail contenant les instructions pour activer ton compte a été envoyé à %{email}.
+  notice_account_not_activated_yet: Tu n’as pas encore activé ton compte. Si tu souhaites recevoir un nouvel e-mail d’activation, <a href="%{url}">clique sur ce lien</a>.
+  notice_account_locked: Ton compte est verrouillé.
+  notice_can_t_change_password: Ce compte utilise une source d’authentification externe. Impossible de changer le mot de passe.
+  notice_account_lost_email_sent: Un e-mail avec les instructions pour choisir un nouveau mot de passe t’a été envoyé.
+  notice_account_activated: Ton compte a été activé. Tu peux maintenant te connecter.
+  notice_successful_create: Création réussie.
+  notice_successful_update: Mise à jour réussie.
+  notice_successful_delete: Suppression réussie.
+  notice_successful_connection: Connexion réussie.
+  notice_file_not_found: La page à laquelle tu essayais d’accéder n’existe pas ou a été supprimée.
+  notice_locking_conflict: Les données ont été mises à jour par un autre utilisateur.
+  notice_not_authorized: Tu n’es pas autorisé à accéder à cette page.
+  notice_not_authorized_archived_project: Le projet auquel tu essaies d’accéder a été archivé.
+  notice_email_sent: Un e-mail a été envoyé à %{value}
+  notice_email_error: Une erreur est survenue lors de l’envoi du mail (%{value})
+  notice_feeds_access_key_reseted: Ta clé d’accès Atom a été réinitialisée.
+  notice_api_access_key_reseted: Ta clé d’accès API a été réinitialisée.
+  notice_failed_to_save_issues: 'Échec de l’enregistrement de %{count} ticket(s) sur %{total} sélectionné(s) : %{ids}.'
+  notice_failed_to_save_time_entries: 'Échec de l’enregistrement de %{count} entrée(s) de temps sur %{total} sélectionné(s) : %{ids}.'
+  notice_failed_to_save_members: 'Échec de l’enregistrement du/des membre(s) : %{errors}.'
+  notice_account_pending: Ton compte a été créé et est en attente d’approbation par l’administrateur.
+  notice_default_data_loaded: Configuration par défaut chargée avec succès.
+  notice_unable_delete_version: Impossible de supprimer la version.
+  notice_unable_delete_time_entry: Impossible de supprimer l’entrée de journal de temps.
+  notice_issue_done_ratios_updated: Ratios d’avancement des tickets mis à jour.
+  notice_gantt_chart_truncated: Le graphique a été tronqué car il dépasse le nombre maximum d’éléments pouvant être affichés (%{max})
+  notice_issue_successful_create: Ticket %{id} créé.
+  notice_issue_update_conflict: Le ticket a été mis à jour par un autre utilisateur pendant que tu le modifiais.
+  notice_account_deleted: Ton compte a été définitivement supprimé.
+  notice_user_successful_create: Utilisateur %{id} créé.
+  notice_new_password_must_be_different: Le nouveau mot de passe doit être différent du mot de passe actuel
+  notice_import_finished: "%{count} éléments ont été importés"
+  notice_import_finished_with_errors: "%{count} éléments sur %{total} n’ont pas pu être importés"
+  notice_issue_not_closable_by_open_tasks: Ce ticket ne peut pas être fermé car il a au moins une sous-tâche ouverte.
+  notice_issue_not_closable_by_blocking_issue: Ce ticket ne peut pas être fermé car il est bloqué par au moins un ticket ouvert.
+  notice_issue_not_reopenable_by_closed_parent_issue: Ce ticket ne peut pas être rouvert car son ticket parent est fermé.
+  notice_invalid_watcher: 'Observateur invalide : l’utilisateur ne recevra aucune notification car il n’a pas accès à cet objet.'
+  error_can_t_load_default_data: 'La configuration par défaut n’a pas pu être chargée : %{value}'
+  error_scm_not_found: L’entrée ou la révision n’a pas été trouvée dans le dépôt.
+  error_scm_command_failed: 'Une erreur est survenue lors de l’accès au dépôt : %{value}'
+  error_scm_annotate: L’entrée n’existe pas ou ne peut pas être annotée.
+  error_scm_annotate_big_text_file: L’entrée ne peut pas être annotée, car elle dépasse la taille maximale de fichier texte.
+  error_issue_not_found_in_project: Le ticket n’a pas été trouvé ou n’appartient pas à ce projet
+  error_no_tracker_in_project: Aucun tracker n’est associé à ce projet. Veuillez vérifier les paramètres du projet.
+  error_no_default_issue_status: Aucun statut de ticket par défaut n’est défini. Veuillez vérifier ta configuration (Va dans « Administration -> Statuts des tickets »).
+  error_can_not_delete_custom_field: Impossible de supprimer le champ personnalisé
+  error_can_not_delete_tracker_html: Ce tracker contient des tickets et ne peut pas être supprimé.<p>Les projets suivants ont des tickets avec ce tracker :<br>%{projects}</p>
+  error_can_not_remove_role: Ce rôle est utilisé et ne peut pas être supprimé.
+  error_can_not_reopen_issue_on_closed_version: Un ticket assigné à une version fermée ne peut pas être rouvert
+  error_can_not_archive_project: Ce projet ne peut pas être archivé
+  error_issue_done_ratios_not_updated: Ratios d’avancement des tickets non mis à jour.
+  error_workflow_copy_source: Veuillez sélectionner un tracker ou un rôle source
+  error_workflow_copy_target: Veuillez sélectionner le(s) tracker(s) et le(s) rôle(s) cible(s)
+  error_unable_delete_issue_status: Impossible de supprimer le statut du ticket (%{value})
+  error_unable_to_connect: Impossible de se connecter (%{value})
+  error_attachments_too_many: This file cannot be uploaded because it exceeds the maximum number of files that can be attached simultaneously (%{max_number_of_files})
+  error_attachment_too_big: Ce fichier ne peut pas être téléchargé car il dépasse la taille maximale autorisée (%{max_size})
+  error_bulk_download_size_too_big: Ces pièces jointes ne peuvent pas être téléchargées en masse car la taille totale des fichiers dépasse la taille maximale autorisée (%{max_size})
+  error_session_expired: Ta session a expiré. Veuillez te reconnecter.
+  error_token_expired: Ce lien de récupération de mot de passe a expiré, veuillez réessayer.
+  warning_attachments_not_saved: "%{count} fichier(s) n’ont pas pu être enregistrés."
+  error_password_expired: Ton mot de passe a expiré ou l’administrateur t’oblige à le changer.
+  error_invalid_file_encoding: Le fichier n’est pas un fichier encodé %{encoding} valide
+  error_invalid_csv_file_or_settings: Le fichier n’est pas un fichier CSV ou ne correspond pas aux paramètres ci-dessous (%{value})
+  error_can_not_read_import_file: Une erreur est survenue lors de la lecture du fichier à importer
+  error_no_data_in_file: Le fichier ne contient aucune donnée
+  error_attachment_extension_not_allowed: L’extension de pièce jointe %{extension} n’est pas autorisée
+  error_ldap_bind_credentials: Compte/mot de passe LDAP invalide
+  error_no_tracker_allowed_for_new_issue_in_project: Le projet n’a aucun tracker pour lequel tu peux créer un ticket
+  error_no_projects_with_tracker_allowed_for_new_issue: Il n’y a aucun projet avec des trackers pour lesquels tu peux créer un ticket
+  error_move_of_child_not_possible: 'La sous-tâche %{child} n’a pas pu être déplacée vers le nouveau projet : %{errors}'
+  error_cannot_reassign_time_entries_to_an_issue_about_to_be_deleted: Le temps passé ne peut pas être réaffecté à un ticket qui est sur le point d’être supprimé
+  warning_fields_cleared_on_bulk_edit: Les modifications entraîneront la suppression automatique des valeurs d’un ou plusieurs champs sur les objets sélectionnés
+  error_exceeds_maximum_hours_per_day: Impossible de saisir plus de %{max_hours} heures le même jour (%{logged_hours} heures ont déjà été saisies)
+  error_can_not_delete_auth_source: Ce mode d’authentification est utilisé et ne peut pas être supprimé.
+  error_spent_on_future_date: Impossible de saisir du temps à une date future
+  error_not_allowed_to_log_time_for_other_users: Tu n’es pas autorisé à saisir du temps pour d’autres utilisateurs
+  error_can_not_execute_macro_html: Erreur lors de l’exécution de la macro <strong>%{name}</strong> (%{error})
+  error_macro_does_not_accept_block: Cette macro n’accepte pas de bloc de texte
+  error_childpages_macro_no_argument: Sans argument, cette macro ne peut être appelée que depuis les pages wiki
+  error_circular_inclusion: Inclusion circulaire détectée
+  error_page_not_found: Page non trouvée
+  error_filename_required: Nom de fichier requis
+  error_invalid_size_parameter: Paramètre de taille invalide
+  error_attachment_not_found: Pièce jointe %{name} non trouvée
+  error_invalid_authenticity_token: Jeton d’authenticité de formulaire invalide.
+  error_query_statement_invalid: Une erreur est survenue lors de l’exécution de la requête et a été enregistrée. Veuillez signaler cette erreur à ton administrateur Redmine.
+  mail_subject_lost_password: Ton mot de passe %{value}
+  mail_body_lost_password: 'Pour changer ton mot de passe, clique sur le lien suivant :'
+  mail_body_lost_password_validity: Tu ne peux changer le mot de passe qu’une seule fois avec ce lien.
+  mail_subject_register: Ton activation de compte %{value}
+  mail_body_register: 'Pour activer ton compte, clique sur le lien suivant :'
+  mail_body_account_information_external: Tu peux utiliser ton compte %{value} pour te connecter.
+  mail_body_account_information: Tes informations de compte
+  mail_subject_account_activation_request: Demande d’activation de compte %{value}
+  mail_body_account_activation_request: 'Un nouvel utilisateur (%{value}) s’est inscrit. Le compte est en attente de ton approbation :'
+  mail_subject_reminder: "%{count} problème(s) dû(s) dans les %{days} prochains jours"
+  mail_body_reminder: "%{count} problème(s) qui te sont assignés sont dus dans les %{days} prochains jours :"
+  mail_subject_wiki_content_added: La page wiki « %{id} » a été ajoutée
+  mail_body_wiki_content_added: La page wiki « %{id} » a été ajoutée par %{author}.
+  mail_subject_wiki_content_updated: La page wiki « %{id} » a été mise à jour
+  mail_body_wiki_content_updated: La page wiki « %{id} » a été mise à jour par %{author}.
+  mail_subject_security_notification: Notification de sécurité
+  mail_body_security_notification_change: "%{field} a été modifié."
+  mail_body_security_notification_change_to: "%{field} a été changé en %{value}."
+  mail_body_security_notification_add: "%{field} %{value} a été ajouté."
+  mail_body_security_notification_remove: "%{field} %{value} a été supprimé."
+  mail_body_security_notification_notify_enabled: L’adresse e-mail %{value} reçoit maintenant les notifications.
+  mail_body_security_notification_notify_disabled: L’adresse e-mail %{value} ne reçoit plus les notifications.
+  mail_body_settings_updated: 'Les paramètres suivants ont été modifiés :'
+  mail_body_password_updated: Ton mot de passe a été changé.
+  mail_destroy_project_failed: Le projet %{value} n’a pas pu être supprimé.
+  mail_destroy_project_successful: Le projet %{value} a été supprimé avec succès.
+  mail_destroy_project_with_subprojects_successful: Le projet %{value} et ses sous-projets ont été supprimés avec succès.
+  field_name: Nom
+  field_description: Description
+  field_summary: Résumé
+  field_is_required: Obligatoire
+  field_firstname: Prénom
+  field_lastname: Nom de famille
+  field_mail: E-mail
+  field_address: E-mail
+  field_filename: Fichier
+  field_filesize: Taille
+  field_downloads: Téléchargements
+  field_author: Auteur
+  field_created_on: Créé
+  field_updated_on: Mis à jour
+  field_closed_on: Fermé
+  field_field_format: Format
+  field_is_for_all: Pour tous les projets
+  field_possible_values: Valeurs possibles
+  field_regexp: Expression régulière
+  field_min_length: Longueur minimale
+  field_max_length: Longueur maximale
+  field_value: Valeur
+  field_category: Catégorie
+  field_title: Titre
+  field_project: Projet
+  field_issue: Problème
+  field_is_member_of_group: Membre du groupe
+  field_status: Statut
+  field_notes: Notes
+  field_is_closed: Problème fermé
+  field_is_default: Valeur par défaut
+  field_tracker: Traqueur
+  field_subject: Sujet
+  field_due_date: Date d’échéance
+  field_assigned_to: Assigné à
+  field_priority: Priorité
+  field_fixed_version: Version cible
+  field_user: Utilisateur
+  field_principal: Utilisateur ou groupe
+  field_role: Rôle
+  field_homepage: Page d’accueil
+  field_is_public: Public
+  field_parent: Sous-projet de
+  field_is_in_roadmap: Problèmes affichés dans la feuille de route
+  field_login: Connexion
+  field_mail_notification: Notifications par e-mail
+  field_admin: Administrateur
+  field_last_login_on: Dernière connexion
+  field_passwd_changed_on: Mot de passe changé le
+  field_language: Langue
+  field_effective_date: Date d’échéance
+  field_password: Mot de passe
+  field_current_password: Mot de passe actuel
+  field_new_password: Nouveau mot de passe
+  field_password_confirmation: Confirmation
+  field_twofa_scheme: Schéma d’authentification à deux facteurs
+  field_version: Version
+  field_type: Type
+  field_host: Hôte
+  field_port: Port
+  field_account: Compte
+  field_base_dn: DN de base
+  field_attr_login: Attribut de connexion
+  field_attr_firstname: Attribut du prénom
+  field_attr_lastname: Attribut du nom de famille
+  field_attr_mail: Attribut de l’e-mail
+  field_onthefly: Création d’utilisateur à la volée
+  field_start_date: Date de début
+  field_done_ratio: "% effectué"
+  field_auth_source: Mode d’authentification
+  field_hide_mail: Masquer mon adresse e-mail
+  field_comments: Commentaire
+  field_url: URL
+  field_start_page: Page de démarrage
+  field_subproject: Sous-projet
+  field_hours: Heures
+  field_activity: Activité
+  field_spent_on: Date
+  field_identifier: Identifiant
+  field_is_filter: Utilisé comme filtre
+  field_issue_to: Problème lié
+  field_delay: Délai
+  field_assignable: Les problèmes peuvent être assignés aux utilisateurs ayant ce rôle
+  field_redirect_existing_links: Rediriger les liens existants
+  field_estimated_hours: Temps estimé
+  field_column_names: Colonnes
+  field_time_entries: Temps passé
+  field_time_zone: Fuseau horaire
+  field_searchable: Recherchable
+  field_default_value: Valeur par défaut
+  field_comments_sorting: Afficher les commentaires
+  field_parent_title: Page parente
+  field_editable: Modifiable
+  field_watcher: Observateur
+  field_content: Contenu
+  field_group_by: Regrouper les résultats par
+  field_sharing: Partage
+  field_parent_issue: Tâche parente
+  field_parent_issue_subject: Sujet de la tâche parente
+  field_member_of_group: Groupe de l’assigné
+  field_assigned_to_role: Rôle de l’assigné
+  field_text: Champ de texte
+  field_visible: Visible
+  field_warn_on_leaving_unsaved: M’avertir lorsque je quitte une page avec du texte non enregistré
+  field_issues_visibility: Visibilité des problèmes
+  field_is_private: Privé
+  field_commit_logs_encoding: Encodage des messages de commit
+  field_scm_path_encoding: Encodage du chemin
+  field_path_to_repository: Chemin vers le dépôt
+  field_root_directory: Répertoire racine
+  field_cvsroot: CVSROOT
+  field_cvs_module: Module
+  field_repository_is_default: Dépôt principal
+  field_multiple: Valeurs multiples
+  field_auth_source_ldap_filter: Filtre LDAP
+  field_core_fields: Champs standard
+  field_timeout: Délai d’expiration (en secondes)
+  field_board_parent: Forum parent
+  field_private_notes: Notes privées
+  field_inherit_members: Hériter des membres
+  field_generate_password: Générer le mot de passe
+  field_must_change_passwd: Doit changer le mot de passe à la prochaine connexion
+  field_default_status: Statut par défaut
+  field_users_visibility: Visibilité des utilisateurs
+  field_time_entries_visibility: Visibilité des journaux de temps
+  field_total_estimated_hours: Temps total estimé
+  field_default_version: Version par défaut
+  field_remote_ip: Adresse IP
+  field_textarea_font: Police utilisée pour les zones de texte
+  field_updated_by: Mis à jour par
+  field_last_updated_by: Dernière mise à jour par
+  field_full_width_layout: Mise en page pleine largeur
+  field_digest: Somme de contrôle
+  field_default_assigned_to: Assigné par défaut
+  field_recently_used_projects: Nombre de projets récemment utilisés dans la boîte de saut
+  field_history_default_tab: Onglet par défaut de l’historique du problème
+  field_unique_id: ID unique
+  field_toolbar_language_options: Langues de la barre d’outils de coloration syntaxique
+  field_twofa_required: Exiger l’authentification à deux facteurs
+  field_default_issue_query: Requête de problème par défaut
+  field_default_project_query: Requête de projet par défaut
+  field_default_time_entry_activity: Activité de temps passé par défaut
+  field_any_searchable: Tout texte recherchable
+  field_estimated_remaining_hours: Temps restant estimé
+  field_last_activity_date: Dernière activité
+  field_thousands_delimiter: Séparateur des milliers
+  setting_app_title: Titre de l’application
+  setting_welcome_text: Texte de bienvenue
+  setting_default_language: Langue par défaut
+  setting_login_required: Authentification requise
+  setting_self_registration: Auto-inscription
+  setting_show_custom_fields_on_registration: Afficher les champs personnalisés lors de l’inscription
+  setting_attachment_max_size: Taille maximale des pièces jointes
+  setting_bulk_download_max_size: Taille totale maximale pour le téléchargement en masse
+  setting_issues_export_limit: Limite d’exportation des problèmes
+  setting_mail_from: Adresse e-mail d’émission
+  setting_plain_text_mail: E-mail en texte brut (pas de HTML)
+  setting_host_name: Nom d’hôte et chemin
+  setting_text_formatting: Formatage du texte
+  setting_wiki_compression: Compression de l’historique wiki
+  setting_feeds_limit: Nombre maximum d’éléments dans les flux Atom
+  setting_default_projects_public: Les nouveaux projets sont publics par défaut
+  setting_autofetch_changesets: Récupérer les commits automatiquement
+  setting_sys_api_enabled: Activer WS pour la gestion des dépôts
+  setting_commit_ref_keywords: Mots-clés de référence
+  setting_commit_fix_keywords: Mots-clés de correction
+  setting_autologin: Connexion automatique
+  setting_date_format: Format de date
+  setting_time_format: Format de l’heure
+  setting_timespan_format: Format de la période
+  setting_cross_project_issue_relations: Autoriser les relations de problèmes inter-projets
+  setting_cross_project_subtasks: Autoriser les sous-tâches inter-projets
+  setting_issue_list_default_columns: Paramètres par défaut de la liste des problèmes
+  setting_repositories_encodings: Encodages des pièces jointes et des dépôts
+  setting_emails_header: En-tête d’e-mail
+  setting_emails_footer: Pied de page d’e-mail
+  setting_protocol: Protocole
+  setting_per_page_options: Options d’objets par page
+  setting_user_format: Format d’affichage des utilisateurs
+  setting_activity_days_default: Jours affichés sur l’activité du projet
+  setting_display_subprojects_issues: Afficher les problèmes des sous-projets sur les projets principaux par défaut
+  setting_enabled_scm: SCM activé
+  setting_mail_handler_body_delimiters: Tronquer les e-mails après l’une de ces lignes
+  setting_mail_handler_enable_regex: Activer les expressions régulières
+  setting_mail_handler_api_enabled: Activer le WS pour les e-mails entrants
+  setting_mail_handler_api_key: Clé API WS des e-mails entrants
+  setting_mail_handler_preferred_body_part: Partie préférée des e-mails multipart (HTML)
+  setting_sys_api_key: Clé API WS de gestion des dépôts
+  setting_sequential_project_identifiers: Générer des identifiants de projet séquentiels
+  setting_gravatar_enabled: Utiliser les icônes utilisateur Gravatar
+  setting_gravatar_default: Image Gravatar par défaut
+  setting_diff_max_lines_displayed: Nombre maximal de lignes de différence affichées
+  setting_file_max_size_displayed: Taille maximale des fichiers texte affichés en ligne
+  setting_repository_log_display_limit: Nombre maximal de révisions affichées sur le journal des fichiers
+  setting_password_max_age: Exiger un changement de mot de passe après
+  setting_password_min_length: Longueur minimale du mot de passe
+  setting_password_required_char_classes: Classes de caractères requises pour les mots de passe
+  setting_lost_password: Autoriser la réinitialisation du mot de passe par e-mail
+  setting_new_project_user_role_id: Rôle attribué à un utilisateur non-administrateur qui crée un projet
+  setting_default_projects_modules: Modules activés par défaut pour les nouveaux projets
+  setting_issue_done_ratio: Calculer le ratio de problèmes terminés avec
+  setting_issue_done_ratio_issue_field: Utiliser le champ du problème
+  setting_issue_done_ratio_interval: Intervalle des options de ratio terminé
+  setting_issue_done_ratio_issue_status: Utiliser le statut du problème
+  setting_start_of_week: Démarrer les calendriers le
+  setting_rest_api_enabled: Activer le service web REST
+  setting_cache_formatted_text: Mettre en cache le texte formaté
+  setting_default_notification_option: Option de notification par défaut
+  setting_commit_logtime_enabled: Activer la journalisation du temps
+  setting_commit_logtime_activity_id: Activité pour le temps enregistré
+  setting_gantt_items_limit: Nombre maximal d’éléments affichés sur le diagramme de Gantt
+  setting_gantt_months_limit: Nombre maximal de mois affichés sur le diagramme de Gantt
+  setting_issue_group_assignment: Autoriser l’affectation de problèmes aux groupes
+  setting_default_issue_start_date_to_creation_date: Utiliser la date actuelle comme date de début pour les nouveaux problèmes
+  setting_commit_cross_project_ref: Autoriser la référence et la correction des problèmes de tous les autres projets
+  setting_unsubscribe: Autoriser les utilisateurs à supprimer leur propre compte
+  setting_session_lifetime: Durée de vie maximale de la session
+  setting_session_timeout: Délai d’inactivité de la session
+  setting_thumbnails_enabled: Afficher les miniatures des pièces jointes
+  setting_thumbnails_size: Taille des miniatures (en pixels)
+  setting_non_working_week_days: Jours non ouvrables
+  setting_jsonp_enabled: Activer le support JSONP
+  setting_default_projects_tracker_ids: Trackers par défaut pour les nouveaux projets
+  setting_mail_handler_excluded_filenames: Exclure les pièces jointes par nom
+  setting_force_default_language_for_anonymous: Forcer la langue par défaut pour les utilisateurs anonymes
+  setting_force_default_language_for_loggedin: Forcer la langue par défaut pour les utilisateurs connectés
+  setting_link_copied_issue: Lier les problèmes lors de la copie
+  setting_copy_attachments_on_issue_copy: Copier les pièces jointes lors de la copie
+  setting_max_additional_emails: Nombre maximal d’adresses e-mail supplémentaires
+  setting_email_domains_allowed: Domaines d’e-mail autorisés
+  setting_email_domains_denied: Domaines d’e-mail non autorisés
+  setting_search_results_per_page: Résultats de recherche par page
+  setting_attachment_extensions_allowed: Extensions autorisées
+  setting_attachment_extensions_denied: Extensions non autorisées
+  setting_new_item_menu_tab: Onglet du menu du projet pour la création de nouveaux objets
+  setting_commit_logs_formatting: Appliquer le formatage du texte aux messages de commit
+  setting_timelog_required_fields: Champs obligatoires pour les journaux de temps
+  setting_close_duplicate_issues: Fermer automatiquement les problèmes en double
+  setting_time_entry_list_defaults: Paramètres par défaut de la liste des journaux de temps
+  setting_timelog_accept_0_hours: Accepter les journaux de temps avec 0 heure
+  setting_timelog_max_hours_per_day: Nombre maximal d’heures pouvant être enregistrées par jour et par utilisateur
+  setting_timelog_accept_future_dates: Accepter les journaux de temps pour des dates futures
+  setting_show_status_changes_in_mail_subject: Afficher les changements de statut dans l’objet des notifications par e-mail des problèmes
+  setting_project_list_defaults: Paramètres par défaut de la liste des projets
+  setting_twofa: Authentification à deux facteurs
+  permission_add_project: Créer un projet
+  permission_add_subprojects: Créer des sous-projets
+  permission_edit_project: Modifier le projet
+  permission_close_project: Fermer / rouvrir le projet
+  permission_delete_project: Supprimer le projet
+  permission_select_project_publicity: Définir le projet comme public ou privé
+  permission_select_project_modules: Sélectionner les modules du projet
+  permission_manage_members: Gérer les membres
+  permission_manage_project_activities: Gérer les activités du projet
+  permission_manage_versions: Gérer les versions
+  permission_manage_categories: Gérer les catégories de problèmes
+  permission_view_issues: Voir les problèmes
+  permission_add_issues: Ajouter des problèmes
+  permission_edit_issues: Modifier les problèmes
+  permission_edit_own_issues: Modifier ses propres problèmes
+  permission_copy_issues: Copier les problèmes
+  permission_manage_issue_relations: Gérer les relations entre les problèmes
+  permission_set_issues_private: Définir les problèmes comme publics ou privés
+  permission_set_own_issues_private: Définir ses propres problèmes comme publics ou privés
+  permission_add_issue_notes: Ajouter des notes
+  permission_edit_issue_notes: Modifier les notes
+  permission_edit_own_issue_notes: Modifier ses propres notes
+  permission_view_private_notes: Voir les notes privées
+  permission_set_notes_private: Définir les notes comme privées
+  permission_delete_issues: Supprimer les problèmes
+  permission_manage_public_queries: Gérer les requêtes publiques
+  permission_save_queries: Enregistrer les requêtes
+  permission_view_gantt: Voir le diagramme de Gantt
+  permission_view_calendar: Voir le calendrier
+  permission_view_issue_watchers: Voir la liste des observateurs
+  permission_add_issue_watchers: Ajouter des observateurs
+  permission_delete_issue_watchers: Supprimer des observateurs
+  permission_log_time: Enregistrer le temps passé
+  permission_view_time_entries: Voir le temps passé
+  permission_edit_time_entries: Modifier les journaux de temps
+  permission_edit_own_time_entries: Modifier ses propres journaux de temps
+  permission_view_news: Voir les actualités
+  permission_manage_news: Gérer les actualités
+  permission_comment_news: Commenter les actualités
+  permission_view_documents: Voir les documents
+  permission_add_documents: Ajouter des documents
+  permission_edit_documents: Modifier les documents
+  permission_delete_documents: Supprimer des documents
+  permission_manage_files: Gérer les fichiers
+  permission_view_files: Voir les fichiers
+  permission_manage_wiki: Gérer le wiki
+  permission_rename_wiki_pages: Renommer les pages wiki
+  permission_delete_wiki_pages: Supprimer les pages wiki
+  permission_view_wiki_pages: Voir le wiki
+  permission_view_wiki_edits: Voir l’historique du wiki
+  permission_edit_wiki_pages: Modifier les pages wiki
+  permission_delete_wiki_pages_attachments: Supprimer les pièces jointes
+  permission_view_wiki_page_watchers: Voir la liste des observateurs de pages wiki
+  permission_add_wiki_page_watchers: Ajouter des observateurs de pages wiki
+  permission_delete_wiki_page_watchers: Supprimer des observateurs de pages wiki
+  permission_protect_wiki_pages: Protéger les pages wiki
+  permission_manage_repository: Gérer le dépôt
+  permission_browse_repository: Parcourir le dépôt
+  permission_view_changesets: Voir les ensembles de modifications
+  permission_commit_access: Accès en commit
+  permission_manage_boards: Gérer les forums
+  permission_view_messages: Voir les messages
+  permission_add_messages: Publier des messages
+  permission_edit_messages: Modifier les messages
+  permission_edit_own_messages: Modifier ses propres messages
+  permission_delete_messages: Supprimer les messages
+  permission_delete_own_messages: Supprimer ses propres messages
+  permission_view_message_watchers: Voir la liste des observateurs de messages
+  permission_add_message_watchers: Ajouter des observateurs de messages
+  permission_delete_message_watchers: Supprimer des observateurs de messages
+  permission_export_wiki_pages: Exporter les pages wiki
+  permission_manage_subtasks: Gérer les sous-tâches
+  permission_manage_related_issues: Gérer les problèmes liés
+  permission_import_issues: Importer des problèmes
+  permission_log_time_for_other_users: Enregistrer le temps passé pour d’autres utilisateurs
+  project_module_issue_tracking: Suivi des problèmes
+  project_module_time_tracking: Suivi du temps
+  project_module_news: Actualités
+  project_module_documents: Documents
+  project_module_files: Fichiers
+  project_module_wiki: Wiki
+  project_module_repository: Dépôt
+  project_module_boards: Forums
+  project_module_calendar: Calendrier
+  project_module_gantt: Gantt
+  label_user: Utilisateur
+  label_user_plural: Utilisateurs
+  label_user_new: Nouvel utilisateur
+  label_user_anonymous: Anonyme
+  label_project: Projet
+  label_project_new: Nouveau projet
+  label_project_plural: Projets
+  label_x_projects:
+    one: 1 projet
+    many: "%{count} projets"
+    other: "%{count} projets"
+  label_project_all: Tous les projets
+  label_project_latest: Derniers projets
+  label_issue: Problème
+  label_issue_new: Nouveau problème
+  label_issue_plural: Problèmes
+  label_issue_view_all: Voir tous les problèmes
+  label_issues_by: Problèmes par %{value}
+  label_issue_added: Problème ajouté
+  label_issue_updated: Problème mis à jour
+  label_issue_note_added: Note ajoutée
+  label_issue_status_updated: Statut mis à jour
+  label_issue_assigned_to_updated: Assigné mis à jour
+  label_issue_priority_updated: Priorité mise à jour
+  label_issue_fixed_version_updated: Version cible mise à jour
+  label_issue_attachment_added: Pièce jointe ajoutée
+  label_document: Document
+  label_document_new: Nouveau document
+  label_document_plural: Documents
+  label_document_added: Document ajouté
+  label_role: Rôle
+  label_role_plural: Rôles
+  label_role_new: Nouveau rôle
+  label_role_and_permissions: Rôles et permissions
+  label_role_anonymous: Anonyme
+  label_role_non_member: Non-membre
+  label_member: Membre
+  label_member_new: Nouveau membre
+  label_member_plural: Membres
+  label_tracker: Tracker
+  label_tracker_plural: Trackers
+  label_tracker_all: Tous les trackers
+  label_tracker_new: Nouveau tracker
+  label_workflow: Flux de travail
+  label_issue_status: Statut du problème
+  label_issue_status_plural: Statuts des problèmes
+  label_issue_status_new: Nouveau statut
+  label_issue_category: Catégorie de ticket
+  label_issue_category_plural: Catégories de tickets
+  label_issue_category_new: Nouvelle catégorie
+  label_custom_field: Champ personnalisé
+  label_custom_field_plural: Champs personnalisés
+  label_custom_field_new: Nouveau champ personnalisé
+  label_enumerations: Énumérations
+  label_enumeration_new: Nouvelle valeur
+  label_information: Informations
+  label_information_plural: Informations
+  label_register: S’inscrire
+  label_password_lost: Mot de passe oublié
+  label_password_required: Confirme ton mot de passe pour continuer
+  label_home: Accueil
+  label_my_page: Ma page
+  label_my_account: Mon compte
+  label_my_projects: Mes projets
+  label_administration: Administration
+  label_login: Se connecter
+  label_logout: Se déconnecter
+  label_help: Aide
+  label_reported_issues: Tickets signalés
+  label_assigned_issues: Tickets assignés
+  label_assigned_to_me_issues: Tickets qui me sont assignés
+  label_updated_issues: Tickets mis à jour
+  label_registered_on: Enregistré le
+  label_activity: Activité
+  label_user_activity: Activité de %{value}
+  label_new: Nouveau
+  label_logged_as: Connecté en tant que
+  label_environment: Environnement
+  label_authentication: Authentification
+  label_auth_source: Mode d’authentification
+  label_auth_source_new: Nouveau mode d’authentification
+  label_auth_source_plural: Modes d’authentification
+  label_subproject_plural: Sous-projets
+  label_subproject_new: Nouveau sous-projet
+  label_and_its_subprojects: "%{value} et ses sous-projets"
+  label_min_max_length: Longueur min. - max.
+  label_list: Liste
+  label_date: Date
+  label_integer: Entier
+  label_float: Flottant
+  label_boolean: Booléen
+  label_string: Texte
+  label_text: Texte long
+  label_attribute: Attribut
+  label_attribute_plural: Attributs
+  label_no_data: Aucune donnée à afficher
+  label_no_preview: Aucun aperçu disponible
+  label_no_preview_alternative_html: Aucun aperçu disponible. %{link} le fichier à la place.
+  label_no_preview_download: Télécharger
+  label_change_status: Changer le statut
+  label_history: Historique
+  label_attachment: Fichier
+  label_attachment_new: Nouveau fichier
+  label_attachment_delete: Supprimer le fichier
+  label_attachment_plural: Fichiers
+  label_file_added: Fichier ajouté
+  label_attachment_description: Description du fichier
+  label_attachment_summary:
+    one: "%{filename} et 1 fichier"
+    many: "%{filename} et %{count} fichiers"
+    other: "%{filename} et %{count} fichiers"
+  label_report: Rapport
+  label_report_plural: Rapports
+  label_news: Actualités
+  label_news_new: Ajouter une actualité
+  label_news_plural: Actualités
+  label_news_latest: Dernières actualités
+  label_news_view_all: Voir toutes les actualités
+  label_news_added: Actualité ajoutée
+  label_news_comment_added: Commentaire ajouté à une actualité
+  label_settings: Paramètres
+  label_overview: Aperçu
+  label_version: Version
+  label_version_new: Nouvelle version
+  label_version_plural: Versions
+  label_version_and_files: Versions (%{count}) et Fichiers
+  label_close_versions: Fermer les versions terminées
+  label_confirmation: Confirmation
+  label_export_to: 'Également disponible en :'
+  label_read: Lire...
+  label_public_projects: Projets publics
+  label_open_issues: ouvert
+  label_open_issues_plural: ouvert
+  label_closed_issues: fermé
+  label_closed_issues_plural: fermé
+  label_x_open_issues_abbr:
+    one: 1 ouvert
+    many: "%{count} ouverts"
+    other: "%{count} ouverts"
+  label_x_closed_issues_abbr:
+    one: 1 fermé
+    many: "%{count} fermés"
+    other: "%{count} fermés"
+  label_x_issues:
+    one: 1 problème
+    many: "%{count} problèmes"
+    other: "%{count} problèmes"
+  label_total: Total
+  label_total_plural: Totaux
+  label_total_time: Temps total
+  label_permissions: Permissions
+  label_current_status: Statut actuel
+  label_new_statuses_allowed: Nouveaux statuts autorisés
+  label_all: tous
+  label_any: n’importe lequel
+  label_none: aucun
+  label_nobody: personne
+  label_next: Suivant
+  label_previous: Précédent
+  label_used_by: Utilisé par
+  label_details: Détails
+  label_add_note: Ajouter une note
+  label_calendar: Calendrier
+  label_months_from: mois à partir de
+  label_gantt: Gantt
+  label_internal: Interne
+  label_last_changes: derniers %{count} changements
+  label_change_view_all: Voir tous les changements
+  label_comment: Commentaire
+  label_comment_plural: Commentaires
+  label_x_comments:
+    one: 1 commentaire
+    many: "%{count} commentaires"
+    other: "%{count} commentaires"
+  label_comment_add: Ajouter un commentaire
+  label_comment_added: Commentaire ajouté
+  label_comment_delete: Supprimer les commentaires
+  label_query: Requête personnalisée
+  label_query_plural: Requêtes personnalisées
+  label_query_new: Nouvelle requête
+  label_my_queries: Mes requêtes personnalisées
+  label_filter_add: Ajouter un filtre
+  label_filter_plural: Filtres
+  label_equals: est
+  label_not_equals: n’est pas
+  label_in_less_than: dans moins de
+  label_in_more_than: dans plus de
+  label_in_the_next_days: dans les prochains
+  label_in_the_past_days: dans le passé
+  label_greater_or_equal: ">="
+  label_less_or_equal: "<="
+  label_between: entre
+  label_in: dans
+  label_today: aujourd’hui
+  label_yesterday: hier
+  label_tomorrow: demain
+  label_this_week: cette semaine
+  label_last_week: la semaine dernière
+  label_next_week: la semaine prochaine
+  label_last_n_weeks: les %{count} dernières semaines
+  label_last_n_days: les %{count} derniers jours
+  label_this_month: ce mois-ci
+  label_last_month: le mois dernier
+  label_next_month: le mois prochain
+  label_this_year: cette année
+  label_date_range: Plage de dates
+  label_less_than_ago: il y a moins de jours
+  label_more_than_ago: il y a plus de jours
+  label_ago: il y a des jours
+  label_contains: contient
+  label_contains_any_of: contient l’un des éléments suivants
+  label_not_contains: ne contient pas
+  label_starts_with: commence par
+  label_ends_with: se termine par
+  label_any_issues_in_project: tous les tickets du projet
+  label_any_issues_not_in_project: tous les tickets qui ne sont pas dans le projet
+  label_no_issues_in_project: aucun ticket dans le projet
+  label_any_open_issues: tous les tickets ouverts
+  label_no_open_issues: aucun ticket ouvert
+  label_has_been: a été
+  label_has_never_been: n’a jamais été
+  label_changed_from: changé de
+  label_day_plural: jours
+  label_repository: Dépôt
+  label_repository_new: Nouveau dépôt
+  label_repository_plural: Dépôts
+  label_branch: Branche
+  label_tag: Balise
+  label_revision: Révision
+  label_revision_plural: Révisions
+  label_revision_id: Révision %{value}
+  label_associated_revisions: Révisions associées
+  label_added: ajouté
+  label_modified: modifié
+  label_copied: copié
+  label_renamed: renommé
+  label_deleted: supprimé
+  label_latest_revision: Dernière révision
+  label_latest_revision_plural: Dernières révisions
+  label_view_revisions: Voir les révisions
+  label_view_all_revisions: Voir toutes les révisions
+  label_view_previous_annotation: Voir l’annotation avant ce changement
+  label_x_revisions: "%{count} révisions"
+  label_max_size: Taille maximale
+  label_roadmap: Feuille de route
+  label_roadmap_due_in: Dû dans %{value}
+  label_roadmap_overdue: "%{value} en retard"
+  label_roadmap_no_issues: Aucun ticket pour cette version
+  label_search: Rechercher
+  label_result_plural: Résultats
+  label_all_words: Tous les mots
+  label_wiki: Wiki
+  label_wiki_edit: Modification du wiki
+  label_wiki_edit_plural: Modifications du wiki
+  label_wiki_page: Page wiki
+  label_wiki_page_plural: Pages wiki
+  label_wiki_page_new: Nouvelle page wiki
+  label_index_by_title: Index par titre
+  label_index_by_date: Index par date
+  label_current_version: Version actuelle
+  label_preview: Aperçu
+  label_feed_plural: Flux
+  label_changes_details: Détails de tous les changements
+  label_issue_tracking: Suivi des tickets
+  label_spent_time: Temps passé
+  label_total_spent_time: Temps total passé
+  label_f_hour: "%{value} heure"
+  label_f_hour_plural: "%{value} heures"
+  label_f_hour_short: "%{value} h"
+  label_time_tracking: Suivi du temps
+  label_change_plural: Changements
+  label_statistics: Statistiques
+  label_commits_per_month: Commits par mois
+  label_commits_per_author: Commits par auteur
+  label_diff: diff
+  label_view_diff: Voir les différences
+  label_diff_inline: en ligne
+  label_diff_side_by_side: côte à côte
+  label_options: Options
+  label_option_auto_lang: auto
+  label_copy_workflow_from: Copier le flux de travail de
+  label_permissions_report: Rapport de permissions
+  label_watched_issues: Tickets surveillés
+  label_related_issues: Tickets liés
+  label_applied_status: Statut appliqué
+  label_loading: Chargement...
+  label_relation_new: Nouvelle relation
+  label_relation_delete: Supprimer la relation
+  label_relates_to: Lié à
+  label_delete_link_to_subtask: Supprimer le lien vers la sous-tâche
+  label_duplicates: Est un doublon de
+  label_duplicated_by: A un doublon
+  label_blocks: Bloque
+  label_blocked_by: Bloqué par
+  label_precedes: Précède
+  label_follows: Suit
+  label_copied_to: Copié vers
+  label_copied_from: Copié de
+  label_stay_logged_in: Rester connecté
+  label_disabled: désactivé
+  label_optional: facultatif
+  label_show_completed_versions: Afficher les versions terminées
+  label_me: moi
+  label_board: Forum
+  label_board_new: Nouveau forum
+  label_board_plural: Forums
+  label_board_locked: Verrouillé
+  label_board_sticky: Épinglé
+  label_topic_plural: Sujets
+  label_message_plural: Messages
+  label_message_last: Dernier message
+  label_message_new: Nouveau message
+  label_message_posted: Message ajouté
+  label_reply_plural: Réponses
+  label_send_information: Envoyer les informations du compte à l'utilisateur
+  label_year: Année
+  label_month: Mois
+  label_week: Semaine
+  label_date_from: De
+  label_date_to: À
+  label_language_based: Basé sur la langue de l'utilisateur
+  label_sort_by: Trier par %{value}
+  label_send_test_email: Envoyer un e-mail de test
+  label_feeds_access_key: Clé d'accès Atom
+  label_missing_feeds_access_key: Clé d'accès Atom manquante
+  label_feeds_access_key_created_on: Clé d'accès Atom créée il y a %{value}
+  label_module_plural: Modules
+  label_added_time_by: Ajouté par %{author} il y a %{age}
+  label_updated_time_by: Mis à jour par %{author} il y a %{age}
+  label_updated_time: Mis à jour il y a %{value}
+  label_jump_to_a_project: Aller à un projet...
+  label_file_plural: Fichiers
+  label_changeset_plural: Ensembles de modifications
+  label_default_columns: Colonnes par défaut
+  label_no_change_option: "(Aucun changement)"
+  label_bulk_edit: Modification en masse
+  label_bulk_edit_selected_issues: Modifier en masse les tickets sélectionnés
+  label_bulk_edit_selected_time_entries: Modifier en masse les entrées de temps sélectionnées
+  label_theme: Thème
+  label_default: Par défaut
+  label_search_titles_only: Rechercher uniquement dans les titres
+  label_user_mail_option_all: Pour tout événement sur tous mes projets
+  label_user_mail_option_selected: Pour tout événement sur les projets sélectionnés uniquement...
+  label_user_mail_option_none: Aucun événement
+  label_user_mail_option_only_my_events: Uniquement pour les éléments que je surveille ou auxquels je participe
+  label_user_mail_option_only_assigned: Uniquement pour les éléments que je surveille ou auxquels je suis affecté
+  label_user_mail_option_only_owner: Uniquement pour les éléments que je surveille ou dont je suis le propriétaire
+  label_user_mail_no_self_notified: Je ne veux pas être informé des changements que j'effectue moi-même
+  label_user_mail_notify_about_high_priority_issues_html: Me notifier également des tickets avec une priorité de <em>%{prio}</em> ou plus
+  label_registration_activation_by_email: Activation du compte par l'utilisateur via vérification par e-mail
+  label_registration_manual_activation: Activation du compte par approbation de l'administrateur
+  label_registration_automatic_activation: Activation automatique du compte
+  label_display_per_page: 'Par page : %{value}'
+  label_age: Âge
+  label_change_properties: Modifier les propriétés
+  label_general: Général
+  label_scm: SCM
+  label_plugins: Plugins
+  label_ldap: LDAP
+  label_ldap_authentication: Authentification LDAP
+  label_ldaps_verify_none: LDAPS (sans vérification de certificat)
+  label_ldaps_verify_peer: LDAPS
+  label_ldaps_warning: Il est recommandé d'utiliser une connexion LDAPS chiffrée avec vérification de certificat pour éviter toute manipulation pendant le processus d'authentification.
+  label_downloads_abbr: D/L
+  label_optional_description: Description facultative
+  label_add_another_file: Ajouter un autre fichier
+  label_auto_watch_on: Surveillance automatique
+  label_auto_watch_on_issue_created: Tickets que j'ai créés
+  label_auto_watch_on_issue_contributed_to: Tickets auxquels j'ai contribué
+  label_preferences: Préférences
+  label_chronological_order: Par ordre chronologique
+  label_reverse_chronological_order: Par ordre chronologique inverse
+  label_incoming_emails: E-mails entrants
+  label_generate_key: Générer une clé
+  label_issue_watchers: Observateurs
+  label_message_watchers: Observateurs
+  label_wiki_page_watchers: Observateurs
+  label_example: Exemple
+  label_display: Afficher
+  label_sort: Trier
+  label_ascending: Croissant
+  label_descending: Décroissant
+  label_date_from_to: De %{start} à %{end}
+  label_days_to_html: "%{days} jours jusqu'à %{date}"
+  label_wiki_content_added: Page Wiki ajoutée
+  label_wiki_content_updated: Page Wiki mise à jour
+  label_group: Groupe
+  label_group_plural: Groupes
+  label_group_new: Nouveau groupe
+  label_group_anonymous: Utilisateurs anonymes
+  label_group_non_member: Utilisateurs non membres
+  label_time_entry_plural: Temps passé
+  label_version_sharing_none: Non partagé
+  label_version_sharing_descendants: Avec les sous-projets
+  label_version_sharing_hierarchy: Avec la hiérarchie de projets
+  label_version_sharing_tree: Avec l'arborescence de projets
+  label_version_sharing_system: Avec tous les projets
+  label_update_issue_done_ratios: Mettre à jour les ratios d'achèvement des tickets
+  label_copy_source: Source
+  label_copy_target: Cible
+  label_copy_same_as_target: Identique à la cible
+  label_display_used_statuses_only: Afficher uniquement les statuts utilisés par ce traqueur
+  label_api_access_key: Clé d'accès API
+  label_missing_api_access_key: Clé d'accès API manquante
+  label_api_access_key_created_on: Clé d'accès API créée il y a %{value}
+  label_profile: Profil
+  label_subtask: Sous-tâche
+  label_subtask_plural: Sous-tâches
+  label_project_copy_notifications: Envoyer des notifications par e-mail pendant la copie du projet
+  label_import_notifications: Envoyer des notifications par e-mail pendant l'importation
+  label_principal_search: 'Rechercher un utilisateur ou un groupe :'
+  label_user_search: 'Rechercher un utilisateur :'
+  label_additional_workflow_transitions_for_author: Transitions supplémentaires autorisées lorsque l'utilisateur est l'auteur
+  label_additional_workflow_transitions_for_assignee: Transitions supplémentaires autorisées lorsque l'utilisateur est l'assigné
+  label_issues_visibility_all: Tous les tickets
+  label_issues_visibility_public: Tous les tickets non privés
+  label_issues_visibility_own: Tickets créés par ou assignés à l'utilisateur
+  label_git_report_last_commit: Rapporter le dernier commit pour les fichiers et les répertoires
+  label_parent_revision: Parent
+  label_child_revision: Enfant
+  label_export_options: "%{export_format} options d'exportation"
+  label_copy_attachments: Copier les pièces jointes
+  label_copy_subtasks: Copier les sous-tâches
+  label_item_position: "%{position} de %{count}"
+  label_completed_versions: Versions terminées
+  label_search_for_watchers: Rechercher des observateurs à ajouter
+  label_session_expiration: Expiration de la session
+  label_status_transitions: Transitions de statut
+  label_fields_permissions: Permissions des champs
+  label_readonly: Lecture seule
+  label_required: Obligatoire
+  label_required_lower: obligatoire
+  label_required_administrators: obligatoire pour les administrateurs
+  label_hidden: Masqué
+  label_attribute_of_project: "%{name} du projet"
+  label_attribute_of_issue: "%{name} du ticket"
+  label_attribute_of_author: "%{name} de l'auteur"
+  label_attribute_of_assigned_to: "%{name} de l'assigné"
+  label_attribute_of_user: "%{name} de l'utilisateur"
+  label_attribute_of_fixed_version: "%{name} de la version cible"
+  label_attribute_of_object: "%{name} de %{object_name}"
+  label_cross_project_descendants: Avec les sous-projets
+  label_cross_project_tree: Avec l'arborescence de projets
+  label_cross_project_hierarchy: Avec la hiérarchie de projets
+  label_cross_project_system: Avec tous les projets
+  label_gantt_progress_line: Ligne de progression
+  label_visibility_private: à moi seulement
+  label_visibility_roles: à ces rôles seulement
+  label_visibility_public: à tous les utilisateurs
+  label_link: Lien
+  label_only: seulement
+  label_drop_down_list: liste déroulante
+  label_checkboxes: cases à cocher
+  label_radio_buttons: boutons radio
+  label_link_values_to: Lier les valeurs à l'URL
+  label_custom_field_select_type: Sélectionner le type d'objet auquel le champ personnalisé doit être attaché
+  label_check_for_updates: Vérifier les mises à jour
+  label_latest_compatible_version: Dernière version compatible
+  label_unknown_plugin: Plugin inconnu
+  label_add_projects: Ajouter des projets
+  label_users_visibility_all: Tous les utilisateurs actifs
+  label_users_visibility_members_of_visible_projects: Membres des projets visibles
+  label_edit_attachments: Modifier les fichiers attachés
+  label_download_all_attachments: Télécharger tous les fichiers
+  label_link_copied_issue: Lier le ticket copié
+  label_ask: Demander
+  label_search_attachments_yes: Rechercher dans les noms de fichiers et descriptions des pièces jointes
+  label_search_attachments_no: Ne pas rechercher les pièces jointes
+  label_search_attachments_only: Rechercher uniquement les pièces jointes
+  label_search_open_issues_only: Uniquement les problèmes ouverts
+  label_email_address_plural: E-mails
+  label_email_address_add: Ajouter une adresse e-mail
+  label_enable_notifications: Activer les notifications
+  label_disable_notifications: Désactiver les notifications
+  label_blank_value: vide
+  label_parent_task_attributes: Attributs des tâches parentes
+  label_parent_task_attributes_derived: Calculé à partir des sous-tâches
+  label_parent_task_attributes_independent: Indépendant des sous-tâches
+  label_time_entries_visibility_all: Toutes les entrées de temps
+  label_time_entries_visibility_own: Entrées de temps créées par l’utilisateur
+  label_member_management: Gestion des membres
+  label_member_management_all_roles: Tous les rôles
+  label_member_management_selected_roles_only: Uniquement ces rôles
+  label_import_issues: Importer des problèmes
+  permission_import_time_entries: Importer des entrées de temps
+  label_select_file_to_import: Sélectionne le fichier à importer
+  label_fields_separator: Séparateur de champs
+  label_fields_wrapper: Délimiteur de champs
+  label_encoding: Encodage
+  label_comma_char: Virgule
+  label_semi_colon_char: Point-virgule
+  label_quote_char: Apostrophe
+  label_double_quote_char: Guillemet
+  label_fields_mapping: Mappage des champs
+  label_relations_mapping: Mappage des relations
+  label_file_content_preview: Aperçu du contenu du fichier
+  label_create_missing_values: Créer les valeurs manquantes
+  label_api: API
+  label_field_format_enumeration: Liste clé/valeur
+  label_default_values_for_new_users: Valeurs par défaut pour les nouveaux utilisateurs
+  label_relations: Relations
+  label_new_project_issue_tab_enabled: Afficher l’onglet « Nouveau problème »
+  label_new_object_tab_enabled: Afficher le menu déroulant « + »
+  label_table_of_contents: Table des matières
+  label_font_default: Police par défaut
+  label_font_monospace: Police à chasse fixe
+  label_font_proportional: Police proportionnelle
+  label_optgroup_bookmarks: Marque-pages
+  label_optgroup_recents: Récemment utilisés
+  label_last_notes: Dernières notes
+  label_default_queries:
+    for_all_projects: Pour tous les projets
+    for_current_project: Pour le projet actuel
+    for_all_users: Pour tous les utilisateurs
+    for_this_user: Pour cet utilisateur
+  label_nothing_to_preview: Rien à prévisualiser
+  label_inherited_from_parent_project: Hérité du projet parent
+  label_inherited_from_group: Hérité du groupe %{name}
+  label_trackers_description: Description des traqueurs
+  label_open_trackers_description: Voir la description de tous les traqueurs
+  label_issue_statuses_description: Description des statuts de problème
+  label_open_issue_statuses_description: Voir la description de tous les statuts de problème
+  label_preferred_body_part_text: Texte
+  label_preferred_body_part_html: HTML
+  label_issue_history_properties: Changements de propriété
+  label_issue_history_notes: Notes
+  label_last_tab_visited: Dernier onglet visité
+  label_password_char_class_uppercase: lettres majuscules
+  label_password_char_class_lowercase: lettres minuscules
+  label_password_char_class_digits: chiffres
+  label_password_char_class_special_chars: caractères spéciaux
+  label_display_type: Afficher les résultats sous forme de
+  label_display_type_list: Liste
+  label_display_type_board: Tableau
+  label_my_bookmarks: Mes marque-pages
+  label_assign_to_me: M’assigner
+  label_default_query: Requête par défaut
+  label_edited: Modifié
+  label_time_by_author: "%{time} par %{author}"
+  label_involved_principals: Auteur / Ancien assigné
+  label_progressbar: Barre de progression
+  button_login: Connexion
+  button_submit: Envoyer
+  button_save: Enregistrer
+  button_check_all: Tout cocher
+  button_uncheck_all: Tout décocher
+  button_collapse_all: Tout réduire
+  button_expand_all: Tout développer
+  button_delete: Supprimer
+  button_create: Créer
+  button_create_and_continue: Créer et ajouter un autre
+  button_test: Tester
+  button_edit: Modifier
+  button_edit_associated_wikipage: 'Modifier la page Wiki associée : %{page_title}'
+  button_add: Ajouter
+  button_change: Changer
+  button_apply: Appliquer
+  button_clear: Effacer
+  button_lock: Verrouiller
+  button_unlock: Déverrouiller
+  button_download: Télécharger
+  button_list: Liste
+  button_view: Afficher
+  button_move: Déplacer
+  button_move_and_follow: Déplacer et suivre
+  button_back: Retour
+  button_cancel: Annuler
+  button_activate: Activer
+  button_disable: Désactiver
+  button_sort: Trier
+  button_log_time: Enregistrer le temps
+  button_rollback: Revenir à cette version
+  button_watch: Suivre
+  button_unwatch: Ne plus suivre
+  button_reply: Répondre
+  button_archive: Archiver
+  button_unarchive: Désarchiver
+  button_reset: Réinitialiser
+  button_rename: Renommer
+  button_change_password: Changer le mot de passe
+  button_copy: Copier
+  button_copy_and_follow: Copier et suivre
+  button_copy_link: Copier le lien
+  button_annotate: Annoter
+  button_fetch_changesets: Récupérer les commits
+  button_update: Mettre à jour
+  button_configure: Configurer
+  button_quote: Citer
+  button_show: Afficher
+  button_hide: Masquer
+  button_edit_section: Modifier cette section
+  button_export: Exporter
+  button_delete_my_account: Supprimer mon compte
+  button_close: Fermer
+  button_reopen: Rouvrir
+  button_import: Importer
+  button_project_bookmark: Ajouter un marque-page
+  button_project_bookmark_delete: Supprimer le marque-page
+  button_filter: Filtrer
+  button_actions: Actions
+  button_add_subtask: Ajouter une sous-tâche
+  button_save_object: Enregistrer %{object_name}
+  button_edit_object: Modifier %{object_name}
+  button_delete_object: Supprimer %{object_name}
+  button_create_and_follow: Créer et suivre
+  button_apply_issues_filter: Appliquer le filtre des problèmes
+  status_active: actif
+  status_registered: enregistré
+  status_locked: verrouillé
+  project_status_active: actif
+  project_status_closed: fermé
+  project_status_archived: archivé
+  project_status_scheduled_for_deletion: planifié pour suppression
+  version_status_open: ouvert
+  version_status_locked: verrouillé
+  version_status_closed: fermé
+  field_active: Actif
+  text_select_mail_notifications: Sélectionne les actions pour lesquelles des notifications par e-mail doivent être envoyées.
+  text_regexp_info: ex. ^[A-Z0-9]+$
+  text_project_destroy_confirmation: Es-tu sûr de vouloir supprimer ce projet et les données associées ?
+  text_projects_bulk_destroy_confirmation: Es-tu sûr de vouloir supprimer les projets sélectionnés et les données associées ?
+  text_projects_bulk_destroy_head: |
+    Tu es sur le point de supprimer définitivement les projets suivants, y compris les éventuels sous-projets et toutes les données associées.
+    Veuille examiner les informations ci-dessous et confirmer que c’est bien ce que tu veux faire.
+    Cette action est irréversible.
+  text_projects_bulk_destroy_confirm: Pour confirmer, saisis « %{yes} » dans la case ci-dessous.
+  text_subprojects_destroy_warning: 'Son ou ses sous-projets : %{value} seront également supprimés.'
+  text_subprojects_bulk_destroy: 'y compris son ou ses sous-projets : %{value}'
+  text_project_close_confirmation: Es-tu sûr de vouloir fermer le projet « %{value} » pour le rendre en lecture seule ?
+  text_project_reopen_confirmation: Es-tu sûr de vouloir rouvrir le projet « %{value} »?
+  text_project_archive_confirmation: Es-tu sûr de vouloir archiver le projet « %{value} »?
+  text_users_bulk_destroy_head: Tu es sur le point de supprimer les utilisateurs suivants et de supprimer toutes les références à ceux-ci. Cette action est irréversible. Souvent, verrouiller les utilisateurs au lieu de les supprimer est une meilleure solution.
+  text_users_bulk_destroy_confirm: Pour confirmer, saisis « %{yes} » ci-dessous.
+  text_workflow_edit: Sélectionne un rôle et un traqueur pour modifier le flux de travail
+  text_are_you_sure: Es-tu sûr ?
+  text_journal_changed: "%{label} est passé de %{old} à %{new}"
+  text_journal_changed_no_detail: "%{label} mis à jour"
+  text_journal_set_to: "%{label} défini sur %{value}"
+  text_journal_deleted: "%{label} supprimé (%{old})"
+  text_journal_added: "%{label} %{value} ajouté"
+  text_tip_issue_begin_day: problème commençant ce jour
+  text_tip_issue_end_day: problème se terminant ce jour
+  text_tip_issue_begin_end_day: problème commençant et se terminant ce jour
+  text_project_identifier_info: Seules les lettres minuscules (a-z), les chiffres, les tirets et les underscores sont autorisés.<br />Une fois enregistré, l’identifiant ne peut pas être modifié.
+  text_caracters_maximum: "%{count} caractères maximum."
+  text_caracters_minimum: Doit contenir au moins %{count} caractères.
+  text_characters_must_contain: Doit contenir %{character_classes}.
+  text_length_between: Longueur entre %{min} et %{max} caractères.
+  text_tracker_no_workflow: Aucun flux de travail défini pour ce traqueur
+  text_role_no_workflow: Aucun flux de travail défini pour ce rôle
+  text_status_no_workflow: Aucun traqueur n’utilise ce statut dans les flux de travail
+  text_unallowed_characters: Caractères non autorisés
+  text_comma_separated: Plusieurs valeurs autorisées (séparées par des virgules).
+  text_line_separated: Plusieurs valeurs autorisées (une ligne par valeur).
+  text_issues_ref_in_commit_messages: Référencer et corriger les problèmes dans les messages de commit
+  text_issue_added: Le problème %{id} a été signalé par %{author}.
+  text_issue_updated: Le problème %{id} a été mis à jour par %{author}.
+  text_wiki_destroy_confirmation: Es-tu sûr de vouloir supprimer ce wiki et tout son contenu ?
+  text_issue_category_destroy_question: Certains problèmes (%{count}) sont assignés à cette catégorie. Que veux-tu faire ?
+  text_issue_category_destroy_assignments: Supprimer les assignations de catégorie
+  text_issue_category_reassign_to: Réassigner les problèmes à cette catégorie
+  text_user_mail_option: Pour les projets non sélectionnés, tu ne recevras des notifications que pour les éléments que tu suis ou auxquels tu es impliqué (par exemple, les problèmes dont tu es l’auteur ou l’assigné).
+  text_no_configuration_data: |-
+    Les rôles, les traqueurs, les statuts de problème et le flux de travail n’ont pas encore été configurés.
+    Il est fortement recommandé de charger la configuration par défaut. Tu pourras la modifier une fois chargée.
+  text_load_default_configuration: Charger la configuration par défaut
+  text_status_changed_by_changeset: Appliqué dans le changeset %{value}.
+  text_time_logged_by_changeset: Appliqué dans le changeset %{value}.
+  text_issues_destroy_confirmation: Es-tu sûr de vouloir supprimer le ou les problèmes sélectionnés ?
+  text_issues_destroy_descendants_confirmation: Cela supprimera également %{count} sous-tâche(s).
+  text_time_entries_destroy_confirmation: Es-tu sûr de vouloir supprimer la ou les entrées de temps sélectionnées ?
+  text_select_project_modules: 'Sélectionne les modules à activer pour ce projet :'
+  text_default_administrator_account_changed: Compte administrateur par défaut modifié
+  text_file_repository_writable: Répertoire des pièces jointes accessible en écriture
+  text_plugin_assets_writable: Répertoire des ressources du plugin accessible en écriture
+  text_all_migrations_have_been_run: Toutes les migrations de base de données ont été exécutées
+  text_minimagick_available: MiniMagick disponible (facultatif)
+  text_convert_available: ImageMagick convert disponible (facultatif)
+  text_gs_available: Prise en charge PDF d’ImageMagick disponible (facultatif)
+  text_default_active_job_queue_changed: L’adaptateur de file d’attente par défaut, qui ne convient qu’au développement/test, a été modifié
+  text_destroy_time_entries_question: "%{hours} heures ont été déclarées sur les problèmes que tu es sur le point de supprimer. Que veux-tu faire ?"
+  text_destroy_time_entries: Supprimer les heures déclarées
+  text_assign_time_entries_to_project: Affecter les heures déclarées au projet
+  text_reassign_time_entries: 'Réaffecter les heures déclarées à ce problème :'
+  text_user_wrote: "%{value} a écrit :"
+  text_user_wrote_in: "%{value} a écrit dans %{link} :"
+  text_enumeration_destroy_question: "%{count} objets sont affectés à la valeur « %{name} »."
+  text_enumeration_category_reassign_to: 'Les réaffecter à cette valeur :'
+  text_email_delivery_not_configured: |-
+    L’envoi d’e-mails n’est pas configuré et les notifications sont désactivées.
+    Configure ton serveur SMTP dans config/configuration.yml et redémarre l’application pour les activer.
+  text_repository_usernames_mapping: |-
+    Sélectionne ou mets à jour l’utilisateur Redmine mappé à chaque nom d’utilisateur trouvé dans le journal du dépôt.
+    Les utilisateurs ayant le même nom d’utilisateur ou e-mail Redmine et de dépôt sont automatiquement mappés.
+  text_diff_truncated: "... Cette différence a été tronquée car elle dépasse la taille maximale qui peut être affichée."
+  text_custom_field_possible_values_info: Une ligne par valeur
+  text_wiki_page_destroy_question: Cette page a %{descendants} page(s) enfant(s) et descendant(s). Que veux-tu faire ?
+  text_wiki_page_nullify_children: Garder les pages enfants comme pages racines
+  text_wiki_page_destroy_children: Supprimer les pages enfants et tous leurs descendants
+  text_wiki_page_reassign_children: Réaffecter les pages enfants à cette page parente
+  text_own_membership_delete_confirmation: |-
+    Tu es sur le point de supprimer tout ou partie de tes autorisations et tu pourrais ne plus être en mesure de modifier ce projet par la suite.
+    Es-tu sûr de vouloir continuer ?
+  text_zoom_in: Zoom avant
+  text_zoom_out: Zoom arrière
+  text_warn_on_leaving_unsaved: La page actuelle contient du texte non enregistré qui sera perdu si tu quittes cette page.
+  text_scm_path_encoding_note: 'Par défaut : UTF-8'
+  text_subversion_repository_note: 'Exemples : file:///, http://, https://, svn://, svn+[tunnelscheme]://'
+  text_git_repository_note: Le dépôt est nu et local (par exemple /gitrepo, c:\gitrepo)
+  text_mercurial_repository_note: Dépôt local (par exemple /hgrepo, c:\hgrepo)
+  text_scm_command: Commande
+  text_scm_command_version: Version
+  text_scm_config: Tu peux configurer tes commandes SCM dans config/configuration.yml. Redémarre l’application après l’avoir modifiée.
+  text_scm_command_not_available: La commande SCM n’est pas disponible. Vérifie les paramètres dans le panneau d’administration.
+  text_issue_conflict_resolution_overwrite: Appliquer mes modifications quand même (les notes précédentes seront conservées, mais certaines modifications pourraient être écrasées)
+  text_issue_conflict_resolution_add_notes: Ajouter mes notes et ignorer mes autres modifications
+  text_issue_conflict_resolution_cancel: Ignorer toutes mes modifications et réafficher %{link}
+  text_account_destroy_confirmation: |-
+    Es-tu sûr de vouloir continuer ?
+    Ton compte sera définitivement supprimé, sans possibilité de le réactiver.
+  text_session_expiration_settings: 'Attention : la modification de ces paramètres peut expirer les sessions actuelles, y compris la tienne.'
+  text_project_closed: Ce projet est fermé et en lecture seule.
+  text_turning_multiple_off: Si tu désactives plusieurs valeurs, plusieurs valeurs seront supprimées afin de ne conserver qu’une seule valeur par élément.
+  text_select_apply_tracker: Sélectionner le traqueur
+  text_select_apply_issue_status: Sélectionner le statut du problème
+  text_avatar_server_config_html: Le serveur d’avatars actuel est <a href="%{url}">%{url}</a>. Tu peux le configurer dans config/configuration.yml.
+  text_no_subject: aucun sujet
+  text_allowed_queries_to_select: Requêtes publiques (pour tous les utilisateurs) uniquement sélectionnables
+  text_setting_config_change: Tu peux configurer le comportement dans config/configuration.yml. Redémarre l’application après l’avoir modifiée.
+  default_role_manager: Manager
+  default_role_developer: Développeur
+  default_role_reporter: Reporter
+  default_tracker_bug: Bug
+  default_tracker_feature: Fonctionnalité
+  default_tracker_support: Support
+  default_issue_status_new: Nouveau
+  default_issue_status_in_progress: En cours
+  default_issue_status_resolved: Résolu
+  default_issue_status_feedback: Commentaires
+  default_issue_status_closed: Fermé
+  default_issue_status_rejected: Rejeté
+  default_doc_category_user: Documentation utilisateur
+  default_doc_category_tech: Documentation technique
+  default_priority_low: Faible
+  default_priority_normal: Normale
+  default_priority_high: Élevée
+  default_priority_urgent: Urgente
+  default_priority_immediate: Immédiate
+  default_activity_design: Conception
+  default_activity_development: Développement
+  enumeration_issue_priorities: Priorités des problèmes
+  enumeration_doc_categories: Catégories de documents
+  enumeration_activities: Activités (suivi du temps)
+  enumeration_system_activity: Activité du système
+  description_filter: Filtre
+  description_search: Champ de recherche
+  description_choose_project: Projets
+  description_project_scope: Portée de la recherche
+  description_notes: Notes
+  description_message_content: Contenu du message
+  description_query_sort_criteria_attribute: Attribut de tri
+  description_query_sort_criteria_direction: Sens du tri
+  description_user_mail_notification: Paramètres de notification par e-mail
+  description_available_columns: Colonnes disponibles
+  description_selected_columns: Colonnes sélectionnées
+  description_all_columns: Toutes les colonnes
+  description_issue_category_reassign: Choisir la catégorie du problème
+  description_wiki_subpages_reassign: Choisir une nouvelle page parente
+  text_repository_identifier_info: Seules les lettres minuscules (a-z), les chiffres, les tirets et les underscores sont autorisés.<br />Une fois enregistré, l’identifiant ne peut pas être modifié.
+  text_login_required_html: Lorsque l’authentification n’est pas requise, les projets publics et leur contenu sont accessibles sur le réseau. Tu peux <a href="%{anonymous_role_path}">modifier les autorisations applicables</a>.
+  label_login_required_yes: Oui
+  label_login_required_no: Non, autoriser l’accès anonyme aux projets publics
+  text_project_is_public_non_member: Les projets publics et leur contenu sont accessibles à tous les utilisateurs connectés.
+  text_project_is_public_anonymous: Les projets publics et leur contenu sont accessibles sur le réseau.
+  label_import_time_entries: Importer les entrées de temps
+  label_import_users: Importer les utilisateurs
+  sudo_mode_new_info_html: "<strong>Que se passe-t-il ?</strong> Tu dois reconfirmer ton mot de passe avant d’effectuer toute action administrative, cela garantit la protection de ton compte."
+  twofa__totp__name: Application d’authentification
+  twofa__totp__text_pairing_info_html: Scanne ce code QR ou saisis la clé en texte brut dans une application TOTP (par exemple <a href="https://support.google.com/accounts/answer/1066447">Google Authenticator</a>, <a href="https://authy.com/download/">Authy</a>, <a href="https://guide.duo.com/third-party-accounts">Duo Mobile</a>) et saisis le code dans le champ ci-dessous pour activer l’authentification à deux facteurs.
+  twofa__totp__label_plain_text_key: Clé en texte brut
+  twofa__totp__label_activate: Activer l’application d’authentification
+  twofa_currently_active: 'Actuellement actif : %{twofa_scheme_name}'
+  twofa_not_active: Non activé
+  twofa_label_code: Code
+  twofa_hint_disabled_html: Le paramètre <strong>%{label}</strong> désactivera et désappariera les appareils d’authentification à deux facteurs pour tous les utilisateurs.
+  twofa_hint_optional_html: Le paramètre <strong>%{label}</strong> permettra aux utilisateurs de configurer l’authentification à deux facteurs à leur guise, sauf si elle est requise par l’un de leurs groupes.
+  twofa_hint_required_html: Le paramètre <strong>%{label}</strong> exigera que tous les utilisateurs configurent l’authentification à deux facteurs lors de leur prochaine connexion.
+  twofa_hint_required_administrators_html: Le paramètre <strong>%{label}</strong> se comporte comme facultatif, mais exigera que tous les utilisateurs ayant des droits d’administration configurent l’authentification à deux facteurs lors de leur prochaine connexion.
+  twofa_label_setup: Activer l’authentification à deux facteurs
+  twofa_label_deactivation_confirmation: Désactiver l’authentification à deux facteurs
+  twofa_notice_select: 'Sélectionne le schéma à deux facteurs que tu souhaites utiliser :'
+  twofa_warning_require: L’administrateur t’oblige à activer l’authentification à deux facteurs.
+  twofa_activated: Authentification à deux facteurs activée avec succès. Il est recommandé de <a data-method="post" href="%{bc_path}">générer des codes de secours</a> pour ton compte.
+  twofa_deactivated: Authentification à deux facteurs désactivée.
+  twofa_mail_body_security_notification_paired: Authentification à deux facteurs activée avec succès à l’aide de %{field}.
+  twofa_mail_body_security_notification_unpaired: Authentification à deux facteurs désactivée pour ton compte.
+  twofa_mail_body_backup_codes_generated: Nouveaux codes de secours d’authentification à deux facteurs générés.
+  twofa_mail_body_backup_code_used: Un code de secours d’authentification à deux facteurs a été utilisé.
+  twofa_invalid_code: Le code est invalide ou obsolète.
+  twofa_label_enter_otp: Saisis ton code d’authentification à deux facteurs.
+  twofa_too_many_tries: Trop de tentatives.
+  twofa_resend_code: Renvoyer le code
+  twofa_code_sent: Un code d’authentification t’a été envoyé.
+  twofa_generate_backup_codes: Générer des codes de secours
+  twofa_text_generate_backup_codes_confirmation: Cela invalidera tous les codes de secours existants et en générera de nouveaux. Souhaites-tu continuer ?
+  twofa_notice_backup_codes_generated: Tes codes de secours ont été générés.
+  twofa_warning_backup_codes_generated_invalidated: De nouveaux codes de secours ont été générés. Tes codes existants du %{time} sont maintenant invalides.
+  twofa_label_backup_codes: Codes de secours d’authentification à deux facteurs
+  twofa_text_backup_codes_hint: Utilise ces codes au lieu d’un mot de passe à usage unique si tu n’as pas accès à ton deuxième facteur. Chaque code ne peut être utilisé qu’une seule fois. Il est recommandé de les imprimer et de les stocker dans un endroit sûr.
+  twofa_text_backup_codes_created_at: Codes de secours générés le %{datetime}.
+  twofa_backup_codes_already_shown: Les codes de secours ne peuvent pas être affichés à nouveau, veuillez <a data-method="post" href="%{bc_path}">générer de nouveaux codes de secours</a> si nécessaire.
+  twofa_text_group_required: Ce paramètre n’est effectif que lorsque le paramètre global d’authentification à deux facteurs est défini sur « facultatif ». Actuellement, l’authentification à deux facteurs est requise pour tous les utilisateurs.
+  twofa_text_group_disabled: Ce paramètre n’est effectif que lorsque le paramètre global d’authentification à deux facteurs est défini sur « facultatif ». Actuellement, l’authentification à deux facteurs est désactivée.
+  text_user_destroy_confirmation: Es-tu sûr de vouloir supprimer cet utilisateur et toutes les références le concernant ? Cette action est irréversible. Souvent, verrouiller un utilisateur au lieu de le supprimer est une meilleure solution. Pour confirmer, saisis son identifiant (%{login}) ci-dessous.
+  text_project_destroy_enter_identifier: Pour confirmer, saisis l’identifiant du projet (%{identifier}) ci-dessous.
+  field_name_or_email_or_login: Nom, e-mail ou identifiant
+  setting_wiki_tablesort_enabled: Tri de tableau basé sur Javascript dans le contenu wiki
